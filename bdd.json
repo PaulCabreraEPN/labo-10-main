@@ -1,11 +1,17 @@
 {
-    "users": [
-      {
-        "id": "9d44ddb4-8a6f-480a-af65-f4db4ed75775",
-        "password": "$2b$10$xXK8IJVB01acgGz4WayiY.KkIoqgEDc8xNmpJb69XcwWXd2BujZZy",
-        "name": "Mireya",
-        "username": "Mire",
-        "email": "mire@epn.edu.ec"
-      }
-    ]
-  }
+  "users": [
+    {
+      "id": "9d44ddb4-8a6f-480a-af65-f4db4ed75775",
+      "password": "$2b$10$xXK8IJVB01acgGz4WayiY.KkIoqgEDc8xNmpJb69XcwWXd2BujZZy",
+      "name": "Mireya",
+      "username": "Mire",
+      "email": "mire@epn.edu.ec"
+    },
+    {
+      "id": "6865f295-4027-4bb8-b342-5d2bdecd8786",
+      "password": "$2b$10$Qc70W0c7rJbTlayYp9uVXOMbepPvelFRWmFJx0WDSsDc.7Pourc1a",
+      "nombre": "Mateo Torres",
+      "username": "Mateor13"
+    }
+  ]
+}

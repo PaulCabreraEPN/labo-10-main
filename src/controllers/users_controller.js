@@ -1,6 +1,7 @@
 import { v4 as uuidv4 }  from 'uuid'
 import bcrypt from "bcrypt"
 import userModel from '../models/users.js';
+import { createToken } from '../middlewares/auth.js';
 const saltRounds = 10
 
 const registerUserController = async(req, res)=> {
@@ -24,6 +25,21 @@ const registerUserController = async(req, res)=> {
     }
 }
 
+const loginUserController = async (req, res) => {
+  
+    const {username, password} = req.body
+    try {
+        const user = await userModel.loginUserModel(username, password)
+        delete user.password
+        const token = createToken(user)
+        res.status(200).json({user, token})
+    } catch (error) {
+     res.status(500).json(error)   
+    }
+}
+
+
 export{
-    registerUserController
+    registerUserController,
+    loginUserController
 }
