@@ -1,41 +1,11 @@
 {
-"users":[
-    {
-        "id":1,
-        "name":"Mateo",
-        "lastName":"Torres",
-        "age":30,
-        "city":"Quito",
-        "email":"mt@tm.com"
-    },
-    {
-        "id":2,
-        "name":"Mireya",
-        "lastName":"García",
-        "age":25,
-        "email":"mg@tm.com"
-    }
-],
-    "complaints":[
-    {
-        "id":1,
-        "user":"Mateo",
-        "complaint":"Heist",
-        "date":"2021-01-01",
-        "hour":"10:00",
-        "status":"pending",
-        "direction":"Av. Amazonas",
-        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJm6xMwwQfsCuxalDN4tppnArZl4dnrxohfQ&s"
-    },
-    {
-        "id":2,
-        "user":"Mireya",
-        "complaint":"Clandestine fight",
-        "date":"2021-01-01",
-        "hour":"11:00",
-        "status":"revision",
-        "direction":"Av. 9 de Octubre",
-        "image":"https://www.elcomercio.com/wp-content/uploads/2022/10/pelea.jpg"
-    }
-]
-}
+    "users": [
+      {
+        "id": "9d44ddb4-8a6f-480a-af65-f4db4ed75775",
+        "password": "$2b$10$xXK8IJVB01acgGz4WayiY.KkIoqgEDc8xNmpJb69XcwWXd2BujZZy",
+        "name": "Mireya",
+        "username": "Mire",
+        "email": "mire@epn.edu.ec"
+      }
+    ]
+  }
