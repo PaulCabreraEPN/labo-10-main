@@ -11,7 +11,15 @@
       "id": "6865f295-4027-4bb8-b342-5d2bdecd8786",
       "password": "$2b$10$Qc70W0c7rJbTlayYp9uVXOMbepPvelFRWmFJx0WDSsDc.7Pourc1a",
       "nombre": "Mateo Torres",
-      "username": "Mateor13"
+      "username": "Mateor13",
+      "email": "mateo@epn.edu.ec"
+    },
+    {
+      "id": "651924cd-f22e-400d-a3e9-d6430fba2d90",
+      "password": "$2b$10$20cncJTgSqGUl7EQa7BuLuI5LBLRoRwm4yk4efMkGM3xVk8IJSRvW",
+      "name": "Paul",
+      "username": "Pol",
+      "email": "paul.cabreraepn.edu.ec"
     }
   ]
 }

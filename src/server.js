@@ -1,6 +1,6 @@
 //Requerir modulos 
 import express from 'express'
-import router from './routers/users_routers.js'
+import routerUser from './routers/users_routers.js'
 
 //Inializaciones 
 const app = express()
@@ -16,8 +16,8 @@ app.get('/', (req, res)=>{
     res.send("OK")
 
 })
-//Rutas para los users
-app.use('/api', router)
+//Rutas para los usuarios
+app.use('/api', routerUser)
 
 //Exportación de la instancia app
 export default app;
