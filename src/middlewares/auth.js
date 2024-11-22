@@ -12,7 +12,7 @@ const verifyToken = (req, res, next) => {
   const token = authHeader.split(' ')[1]
   jwt.verify(token,'secret_key', (err, decoded)=>{
     if(err){
-        return res.statu(403).json({message:"Fallo al autenticar"})
+        return res.status(403).json({message:"Fallo al autenticar"})
     }
     req.user = decoded
     next()
