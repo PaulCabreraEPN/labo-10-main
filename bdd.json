@@ -21,5 +21,31 @@
       "username": "Pol",
       "email": "paul.cabreraepn.edu.ec"
     }
+  ],
+  "complaints": [
+    {
+      "id": "99605d0a-01bb-4b18-84ad-4c6af49f7169",
+      "barrio": "Solanda",
+      "username": "Pol",
+      "hora": "19:00h",
+      "tipo": "Robo",
+      "perdida_pertenencias": "Si"
+    },
+    {
+      "id": "e50fb8dd-5842-43bc-a88f-22dbfa0416cf",
+      "barrio": "Solanda",
+      "username": "Mire",
+      "hora": "20:00h",
+      "tipo": "Robo",
+      "perdida_pertenencias": "No"
+    },
+    {
+      "id": "0d0bddcd-b432-493d-ba4e-4736069a6729",
+      "barrio": "La Cocha",
+      "username": "Mateo13",
+      "hora": "08:00h",
+      "tipo": "Robo",
+      "perdida_pertenencias": "No"
+    }
   ]
 }
