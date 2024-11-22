@@ -26,17 +26,20 @@ const registerUserController = async(req, res)=> {
 }
 
 const loginUserController = async (req, res) => {
-  
-    const {username, password} = req.body
+    const { username, password } = req.body;
     try {
-        const user = await userModel.loginUserModel(username, password)
-        delete user.password
-        const token = createToken(user)
-        res.status(200).json({user, token})
+        const user = await userModel.loginUserModel(username, password);
+        if (user.error) {
+            return res.status(400).json({ error: user.error });
+        }
+        delete user.password;
+        const token = createToken(user);
+        res.status(200).json({ user, token });
     } catch (error) {
-     res.status(500).json(error)   
+        res.status(500).json({ error: "Error interno del servidor" });
     }
-}
+};
+
 
 
 export{
