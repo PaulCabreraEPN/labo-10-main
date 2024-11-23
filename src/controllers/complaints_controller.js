@@ -21,6 +21,7 @@ const registerComplaintController = async (req, res) =>{
 }
 
 const getComplaintController = async (req,res) => {
+    
     try {
         const complaints = await complainModel.getComplaint()
         res.status(200).json(complaints)
@@ -30,10 +31,52 @@ const getComplaintController = async (req,res) => {
 }
 
 const findComplaintController = async (req,res) => {
+    
     const {id} = req.params;
+
     try {
         const complaint = await complainModel.findComplaint(id)
         res.status(200).json(complaint)
+    } catch (error) {
+        res.status(500).json({message:error})
+    }
+}
+
+const updateComplaintController = async (req,res) => {
+    
+    const {id} = req.params;
+
+    try {
+        const complaint=await complainModel.updateComplaint(id,req.body)
+        res.status(200).json(complaint)
+    } catch (error) {
+        res.status(500).json({message:error})
+    }
+
+}
+
+const updateComplaintTotallyController = async (req,res) => {
+    const {id} = req.params
+
+    const orderData={
+        id,
+        ...req.body
+    }
+    
+    try {
+        const complaint = await complainModel.updateComplaintTotally(id, orderData)
+        res.status(200).json(complaint)
+    } catch (error) {
+        res.status(500).json({message:error})
+    }
+}
+
+const deleteComplaintController = async (req,res) => {
+    const {id} = req.params
+
+    try {
+        const complaint = await complainModel.deleteComplaint(id)
+        res.status(200).json({message:'Denuncia eliminada correctamente'})
     } catch (error) {
         res.status(500).json({message:error})
     }
@@ -43,5 +86,8 @@ const findComplaintController = async (req,res) => {
 export {
     registerComplaintController,
     getComplaintController,
-    findComplaintController
+    findComplaintController,
+    updateComplaintController,
+    updateComplaintTotallyController,
+    deleteComplaintController
 }

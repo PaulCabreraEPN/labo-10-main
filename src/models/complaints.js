@@ -14,7 +14,7 @@ const complainModel = {
         return data;
     },
 
-    
+
     async getComplaint(){
         try {
             const url = "http://localhost:4000/complaints";
@@ -31,6 +31,49 @@ const complainModel = {
         try {
             const url = `http://localhost:4000/complaints/${idComplaint}`
             const peticion = await fetch(url);
+            const data = await peticion.json();
+            return data;
+        } catch (error) {
+            console.error(error)
+        }
+    },
+
+    async updateComplaint(idComplaint, updatedComplaint){
+        try {
+            const url = `http://localhost:4000/complaints/${idComplaint}`
+            const peticion = await fetch(url,{
+                method:'PATCH',
+                body:JSON.stringify(updatedComplaint),
+                headers:{'Content-Type':'application/json'},
+            });
+            const data = await peticion.json();
+            return data;
+        } catch (error) {
+            console.error(error)
+        }
+    },
+
+    async updateComplaintTotally(idComplaint, updatedComplaint){
+        try {
+            const url = `http://localhost:4000/complaints/${idComplaint}`
+            const peticion = await fetch(url,{
+                method:'PUT',
+                body:JSON.stringify(updatedComplaint),
+                headers:{'Content-Type':'application/json'},
+            });
+            const data = await peticion.json();
+            return data;
+        } catch (error) {
+            console.error(error)
+        }
+    },
+
+    async deleteComplaint(idComplaint){
+        try {
+            const url = `http://localhost:4000/complaints/${idComplaint}`
+            const peticion = await fetch(url,{
+                method:'DELETE'
+            });
             const data = await peticion.json();
             return data;
         } catch (error) {
