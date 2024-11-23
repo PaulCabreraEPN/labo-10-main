@@ -20,6 +20,28 @@ const registerComplaintController = async (req, res) =>{
     }
 }
 
+const getComplaintController = async (req,res) => {
+    try {
+        const complaints = await complainModel.getComplaint()
+        res.status(200).json(complaints)
+    } catch (error) {
+        res.status(500).json({message:error})
+    }
+}
+
+const findComplaintController = async (req,res) => {
+    const {id} = req.params;
+    try {
+        const complaint = await complainModel.findComplaint(id)
+        res.status(200).json(complaint)
+    } catch (error) {
+        res.status(500).json({message:error})
+    }
+}
+
+
 export {
-    registerComplaintController
+    registerComplaintController,
+    getComplaintController,
+    findComplaintController
 }
