@@ -14,7 +14,7 @@ app.use(express.json())
 //Rutas
 //Ruta principal
 app.get('/', (req, res)=>{
-    res.send("OK")
+    res.send("El Servidor del GRUPO 1 está Opreando...")
 })
 
 //Rutas para los usuarios
