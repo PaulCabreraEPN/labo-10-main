@@ -20,6 +20,13 @@
       "name": "Paul",
       "username": "Pol",
       "email": "paul.cabreraepn.edu.ec"
+    },
+    {
+      "id": "508abfbf-b3fd-4bb3-8f74-7fa586dffd7f",
+      "password": "$2b$10$XzlLkJUlmUZapd0SsahYcuEYQbJ01hPXTFlCeIlaoayYFfULmgFM2",
+      "name": "Mathias",
+      "username": "MT",
+      "email": "mathias@epn.edu.ec"
     }
   ],
   "complaints": [
