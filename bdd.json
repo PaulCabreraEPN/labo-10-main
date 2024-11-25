@@ -53,6 +53,14 @@
       "hora": "08:00h",
       "tipo": "Robo",
       "perdida_pertenencias": "No"
+    },
+    {
+      "id": "05fc53e5-62e5-43b1-bde6-6c174accb708",
+      "barrio": "La Cocha",
+      "username": "Mateo13",
+      "hora": "08:00h",
+      "tipo": "Robo",
+      "perdida_pertenencias": "No"
     }
   ]
 }
