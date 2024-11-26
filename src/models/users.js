@@ -24,6 +24,12 @@ const userModel = {
         if (!user){
             return {error: "Usuario o contraseña incorrectos"}
         }
+        if (user.password === null){
+            return {error: "Usuario o contraseña incorrectos"}
+        }
+        if (user.username === null){
+            return {error: "Usuario o contraseña incorrectos"}
+        }
         const passwordMatch = await bcrypt.compare(password, user.password)
         if (user && passwordMatch){
             return user
