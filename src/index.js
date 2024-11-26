@@ -1,4 +1,6 @@
 import app from "./server.js";
 
-app.listen(3000);
-console.log("Server OK");
+// Iniciar el servidor en el puerto configurado
+app.listen(app.get('port'), () => {
+    console.log(`Servidor corriendo en el puerto ${app.get('port')}`);
+});

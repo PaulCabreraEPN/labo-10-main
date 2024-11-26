@@ -1,6 +1,7 @@
 //Requerir modulos 
 import express from 'express'
-import router from './routers/users_routers.js'
+import routerUser from './routers/users_routers.js'
+import routerComplaint from './routers/complaints_routers.js'
 
 //Inializaciones 
 const app = express()
@@ -13,11 +14,14 @@ app.use(express.json())
 //Rutas
 //Ruta principal
 app.get('/', (req, res)=>{
-    res.send("OK")
-
+    res.send("El Servidor del GRUPO 1 está Opreando...")
 })
-//Rutas para los users
-app.use('/api', router)
+
+//Rutas para los usuarios
+app.use('/api', routerUser)
+
+//Ruta para las denuncias
+app.use('/api', routerComplaint)
 
 //Exportación de la instancia app
 export default app;

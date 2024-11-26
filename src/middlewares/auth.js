@@ -20,6 +20,6 @@ const verifyToken = (req, res, next) => {
 }
 
 export {
-    createToken, 
-    verifyToken
+  createToken, 
+  verifyToken
 }
